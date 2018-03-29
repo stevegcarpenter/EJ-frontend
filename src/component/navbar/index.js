@@ -13,10 +13,12 @@ class Navbar extends React.Component {
     };
     this.makeOpaque = this.makeOpaque.bind(this);
   }
+
   makeOpaque(e) {
     let opaque = window.pageYOffset > 100 ? false : true;
     this.setState({opaque});
   }
+
   render() {
     window.onscroll = this.makeOpaque;
     return (
