@@ -6,7 +6,8 @@ const cors = require('cors');
 
 app.use(express.static(`${__dirname}/build`));
 
-app.get('*',(request,response) => {
+// Serve up the index.html file
+app.get('*',() => {
   response.sendFile(`${__dirname}/build/index.html`);
 });
 
